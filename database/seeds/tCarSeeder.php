@@ -11,8 +11,8 @@ class tCarSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('tCar')->delete();
-        \DB::table('tCar')->insert(array(
+        \DB::table('cars')->delete();
+        \DB::table('cars')->insert(array(
             0 => array(
                 'name' => "GTR",
                 'brand' => "Nissan", 

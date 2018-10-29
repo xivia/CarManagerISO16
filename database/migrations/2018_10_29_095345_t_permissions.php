@@ -13,7 +13,7 @@ class TPermissions extends Migration
      */
     public function up()
     {
-        Schema::create('tPermissions', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
@@ -27,6 +27,6 @@ class TPermissions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tPermissions');
+        Schema::dropIfExists('permissions');
     }
 }

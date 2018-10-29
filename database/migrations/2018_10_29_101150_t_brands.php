@@ -13,11 +13,11 @@ class TBrands extends Migration
      */
     public function up()
     {
-        Schema::create('tBrands', function (Blueprint $table) {
-            $table->increments('brandId');
-            $table->string('braName');
-            $table->string('braCountry');
-            $table->date('braFoundingYear');
+        Schema::create('brands', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('country');
+            $table->date('foundingYear');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class TBrands extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tBrands');
+        Schema::dropIfExists('brands');
     }
 }

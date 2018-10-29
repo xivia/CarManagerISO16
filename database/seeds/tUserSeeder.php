@@ -11,8 +11,8 @@ class tUserSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('Users')->delete();
-        \DB::table('Users')->insert(array(
+        \DB::table('users')->delete();
+        \DB::table('users')->insert(array(
         0 => array(
             'id' => 1,
             'name' => "Name Admin",
