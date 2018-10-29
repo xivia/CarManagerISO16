@@ -15,24 +15,24 @@ class tUserSeeder extends Seeder
         \DB::table('Users')->insert(array(
         0 => array(
             'id' => 1,
-            'name' => "LeAdmin",
-            'email' => "admin@admin.de",
-            'password' => bcrypt('12345678'),
-            'type' => "admin",
+            'name' => "Name Admin",
+            'email' => "admin@admin.edu",
+            'password' => bcrypt('1'),
+            'type' => 1,
         ),
         1 => array(
             'id' => 2,
-            'name' => "LeMod",
-            'email' => "moderator@moderator.de",
-            'password' => bcrypt('12345678'),
-            'type' => "moderator",
+            'name' => "Name Mod",
+            'email' => "moderator@moderator.edu",
+            'password' => bcrypt('1'),
+            'type' => 2,
         ),
         2 => array(
             'id' => 3,
-            'name' => "LeGuest",
-            'email' => "guest@guest.de",
-            'password' => bcrypt('12345678'),
-            'type' => "guest",
+            'name' => "Name Guest",
+            'email' => "guest@guest.edu",
+            'password' => bcrypt('1'),
+            'type' => 3,
         )
     ));
     }
