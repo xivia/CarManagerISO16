@@ -19,17 +19,17 @@ class TCars extends Migration
             $table->integer('carBrand');
             $table->integer('carDoors');
             $table->integer('carSeats');
-            $table->double('acceleration', 4, 2);
+            $table->double('caraAcceleration', 4, 2);
             $table->integer('carPS');
             $table->integer('carTorque');
             $table->integer('carCylinders');
             $table->integer('carBasePrice');
-            $table->enum('transmission', ['manuell', 'automatic']);
-            $table->string('drivetrain',50);
-            $table->double('weight', 6, 2);
-            $table->integer('velocity');
+            $table->enum('carTransmission', ['manuell', 'automatic']);
+            $table->string('carDrivetrain',50);
+            $table->double('carWeight', 6, 2);
+            $table->integer('carVelocity');
             $table->integer('carManufacturingYear');
-            $table->string('picture',200)->nullable($value = true);
+            $table->string('carPicture',200)->nullable($value = true);
             $table->timestamps();
         });
     }
