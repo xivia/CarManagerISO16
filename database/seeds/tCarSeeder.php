@@ -15,11 +15,24 @@ class tCarSeeder extends Seeder
         \DB::table('tCar')->insert(array(
             0 => array(
                 'name' => "GTR",
-                'brand' => "Nissan", // BSP.
+                'brand' => "Nissan", 
+                'doors' =>  2, 
+                'seats' =>  4, 
+                '' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
+                'brand' => "Nissan", 
             ),
             1 => array(
                 'name' => "GTR",
-                'brand' => "Nissan", // BSP.
+                'brand' => "Nissan", 
             )
         ));
     }
