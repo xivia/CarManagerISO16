@@ -16,7 +16,7 @@ class TCars extends Migration
         Schema::create('tCar', function (Blueprint $table) {
             $table->increments('carId');
             $table->string('carName');
-            $table->string('carBrand');
+            $table->integer('carBrand');
             $table->integer('carDoors');
             $table->integer('carSeats');
             $table->double('acceleration', 4, 2);
@@ -28,6 +28,7 @@ class TCars extends Migration
             $table->string('drivetrain',50);
             $table->double('weight', 6, 2);
             $table->integer('velocity');
+            $table->integer('carManufacturingYear');
             $table->string('picture',200)->nullable($value = true);
             $table->timestamps();
         });
