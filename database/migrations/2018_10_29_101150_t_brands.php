@@ -17,7 +17,7 @@ class TBrands extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('country');
-            $table->date('foundingYear');
+            $table->integer('foundingYear');
             $table->timestamps();
         });
     }
