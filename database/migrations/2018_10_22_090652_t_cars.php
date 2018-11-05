@@ -13,21 +13,22 @@ class TCars extends Migration
      */
     public function up()
     {
-        Schema::create('tCar', function (Blueprint $table) {
-            $table->increments('carId');
-            $table->string('carName');
-            $table->string('carBrand');
-            $table->integer('carDoors');
-            $table->integer('carSeats');
+        Schema::create('cars', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('brand_id');
+            $table->integer('doors');
+            $table->integer('seats');
             $table->double('acceleration', 4, 2);
-            $table->integer('carPS');
-            $table->integer('carTorque');
-            $table->integer('carCylinders');
-            $table->integer('carBasePrice');
+            $table->integer('ps');
+            $table->integer('torque');
+            $table->integer('cylinders');
+            $table->integer('basePrice');
             $table->enum('transmission', ['manuell', 'automatic']);
             $table->string('drivetrain',50);
             $table->double('weight', 6, 2);
             $table->integer('velocity');
+            $table->integer('manufacturingYear');
             $table->string('picture',200)->nullable($value = true);
             $table->timestamps();
         });
@@ -40,6 +41,6 @@ class TCars extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tCar');
+        Schema::dropIfExists('cars');
     }
 }
