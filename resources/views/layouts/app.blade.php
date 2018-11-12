@@ -502,6 +502,8 @@
 </div>
 <!-- end google map -->
 
+@yield('content')
+
 <!-- start footer -->
 <footer>
     <div class="container">
