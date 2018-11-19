@@ -3,27 +3,37 @@
 
 <head>
     <meta charset="utf-8">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!--
+
+Template 2081 Solution
+
+http://www.tooplate.com/view/2081-solution
+
+-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- jquery flexslider -->
+    <script src="js/jquery.flexslider.js"></script>
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- google font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+    <!-- custom -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-
-
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
@@ -170,7 +180,7 @@
         </div>
     </div>
     <!-- end service -->
-
+    @yield('content')
     <!-- start divider -->
     <div id="divider">
         <div class="container">
@@ -304,70 +314,6 @@
         </div>
     </div>
     <!-- end newsletter -->
-
-    <!-- start pricing -->
-    <div id="pricing" class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow bounce">
-                    <h2>Our Pricing</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
-                    <div class="plan plan_one">
-                        <h4 class="plan_title">Basic</h4>
-                        <ul>
-                            <li>$20 per month</li>
-                            <li>100GB Storage</li>
-                            <li>1,000GB Transfer</li>
-                            <li>10 Bootstrap Themes</li>
-                            <li>24-hr support</li>
-                        </ul>
-                        <button class="btn btn-warning">SIGN UP</button>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="plan plan_two">
-                        <h4 class="plan_title">Standard</h4>
-                        <ul>
-                            <li>$40 per month</li>
-                            <li>300GB Storage</li>
-                            <li>3,000GB Transfer</li>
-                            <li>30 Bootstrap Themes</li>
-                            <li>12-hr response</li>
-                        </ul>
-                        <button class="btn btn-warning">SIGN UP</button>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 wow fadeInDown" data-wow-delay="1s">
-                    <div class="plan plan_three">
-                        <h4 class="plan_title">Professional</h4>
-                        <ul>
-                            <li>$60 per month</li>
-                            <li>600GB Storage</li>
-                            <li>6,000GB Transfer</li>
-                            <li>60 Premium Themes</li>
-                            <li>1-hr response</li>
-                        </ul>
-                        <button class="btn btn-warning">SIGN UP</button>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 wow fadeInRight" data-wow-delay="1.3s">
-                    <div class="plan plan_four">
-                        <h4 class="plan_title">Advanced</h4>
-                        <ul>
-                            <li>$80 per month</li>
-                            <li>1,000GB Storage</li>
-                            <li>10TB Premium</li>
-                            <li>80 Premium Themes</li>
-                            <li>15-min response</li>
-                        </ul>
-                        <button class="btn btn-warning">SIGN UP</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end pricing -->
 
     <!-- start portfolio -->
     <div id="portfolio">
@@ -514,17 +460,7 @@
             </div>
         </div>
     </div>
-    </div>
     <!-- end contact -->
-
-    <!-- start google map -->
-    <div class="google_map">
-        <div id="map-canvas"></div>
-    </div>
-    <!-- end google map -->
-
-    @yield('content')
-
     <!-- start footer -->
     <footer>
         <div class="container">
@@ -544,16 +480,12 @@
                     </ul>
                 </div>
             </div>
+        </div>
     </footer>
     <!-- end footer -->
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- jquery flexslider -->
-    <script src="js/jquery.flexslider.js"></script>
-    <!-- bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+
     <!-- isotope -->
     <script src="js/isotope.js"></script>
     <!-- images loaded -->
@@ -562,15 +494,8 @@
     <script src="js/wow.min.js"></script>
     <!-- smoothScroll -->
     <script src="js/smoothscroll.js"></script>
-    <!-- animate -->
-    <link rel="stylesheet" href="css/animate.min.css">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- google font -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
     <!-- custom -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <script src="js/custom.js"></script>
 
 </body>
 
