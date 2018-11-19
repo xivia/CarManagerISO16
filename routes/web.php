@@ -20,3 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth','admin']);
+
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth','admin']);
+
+Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car');
+
+Route::get('/create', function () {
+	return view('createCar');
+});

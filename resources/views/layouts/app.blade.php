@@ -514,6 +514,7 @@
             </div>
         </div>
     </div>
+    </div>
     <!-- end contact -->
 
     <!-- start google map -->
@@ -521,6 +522,8 @@
         <div id="map-canvas"></div>
     </div>
     <!-- end google map -->
+
+    @yield('content')
 
     <!-- start footer -->
     <footer>
@@ -541,15 +544,14 @@
                     </ul>
                 </div>
             </div>
-        </div>
     </footer>
     <!-- end footer -->
 
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-        <!-- jquery flexslider -->
-        <script src="js/jquery.flexslider.js"></script>
+    <!-- jquery flexslider -->
+    <script src="js/jquery.flexslider.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
     <!-- isotope -->
@@ -560,9 +562,6 @@
     <script src="js/wow.min.js"></script>
     <!-- smoothScroll -->
     <script src="js/smoothscroll.js"></script>
-
-    <!-- custom -->
-    <script src="js/custom.js"></script>
     <!-- animate -->
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- font-awesome -->
