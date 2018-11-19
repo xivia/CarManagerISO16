@@ -28,3 +28,9 @@ Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car')
 Route::get('/create', function () {
 	return view('createCar');
 });
+
+Route::get('/brands', function () {
+	return view('BrandName');
+});
+
+
