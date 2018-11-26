@@ -17,7 +17,7 @@
                     <li><a href="#team" class="smoothScroll">TEAM</a></li>
                     <li><a href="#pricing" class="smoothScroll">PRICING</a></li>
                     <li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
-                    <li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+                    <li><a href="/brands" class="">Brand Name</a></li>
                 </ul>
             </div>
         </div>
