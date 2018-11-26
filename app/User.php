@@ -27,4 +27,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isAdmin() {
+        if ($this->permission_id == '2') {
+            return true;
+        } else {
+        return false;
+        }
+    }
+
+    public function isMod() {
+        if ($this->permission_id == '3') {
+            return true;
+        } else {
+        return false;
+        }
+    }    
 }
