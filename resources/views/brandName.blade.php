@@ -2,6 +2,7 @@
 
 @section('content')
 <h1 class="text-center text-white mt-3">Manage Car Brands</h1><br>
+ <form method="POST" action="{{ route('post.braname') }}" enctype="multipart/form-data">
 <table class="table table-dark">
   <thead>
     <tr>
