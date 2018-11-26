@@ -24,8 +24,7 @@ http://www.tooplate.com/view/2081-solution
     <!-- animate -->
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
     <!-- font-awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- google font -->

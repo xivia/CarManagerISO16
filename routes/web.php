@@ -24,7 +24,7 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth'
 Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car');
 
 Route::get('/create', function () {
-	return view('create_car');
+	return view('createCar');
 });
 
 Route::get('/brands', function () {
