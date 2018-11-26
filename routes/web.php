@@ -23,12 +23,14 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth'
 
 Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car');
 
+Route::post('/brands', 'BrandNameController@index')->middleware(['auth','admin'])->name('post.braname');
+
 Route::get('/create', function () {
 	return view('createCar');
 });
 
 Route::get('/brands', function () {
-	return view('BrandName');
+	return view('brandName');
 });
 
 
