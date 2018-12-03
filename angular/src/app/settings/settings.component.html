@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="col-sm-8 offset-2">
+    <div class="card">
+      <h5 class="card-header cardheader">Settings</h5>
+      <div class="card-body LRBody">
+        <form method="POST">
+          <div class="form-group">
+            <label for="spalten">Rows</label>
+            <select name="row" class="form-control" id="row" [(ngModel)]="settings.row">
+              <option [value]="row" *ngFor="let row of values">{{ row }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="column">Columns</label>
+            <select name="column" class="form-control" id="column" [(ngModel)]="settings.column">
+              <option [value]="column" *ngFor="let column of values">{{ column }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="column">Scale</label>
+            <select name="scale" class="form-control" id="scale" [(ngModel)]="settings.scale">
+              <option [value]="scale" *ngFor="let scale of scales">{{ scale }}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary LRPrimary">Update</button>
+          <a class="btn btn-secondary LRSecondary" href="/home">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

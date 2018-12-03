@@ -48,10 +48,8 @@ class carController extends Controller{
 
     }
     
-    public function index($car){
-        $cars = DB::table('cars')->where('id', $car)->first();
-
-        return view('carspec', compact('cars'));
-    }
-    
+    public function index(){
+        $brands = DB::table('brands');
+        return view('createCar', compact('brands'));
+    }   
 }
