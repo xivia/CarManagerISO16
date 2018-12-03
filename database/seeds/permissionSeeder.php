@@ -13,13 +13,13 @@ class permissionSeeder extends Seeder
     {
         \DB::table('permissions')->delete();
         \DB::table('permissions')->insert(array(
-            0 => array(
+            1 => array(
                 'name' => "Admin"
             ),
-            1 => array(
+            2 => array(
                 'name' => "Moderator"
             ),
-            2 => array(
+            3 => array(
                 'name' => "User"
             )
         ));

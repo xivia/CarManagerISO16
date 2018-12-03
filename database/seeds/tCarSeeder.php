@@ -11,7 +11,7 @@ class tCarSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('cars')->delete();
+        \DB::table('cars')->delete()
         \DB::table('cars')->insert(array(
             0 => array(
                 'name' => "GTR",
@@ -63,6 +63,7 @@ class tCarSeeder extends Seeder
                 'manufacturingYear' => "2018", 
                 
             ),
-        ));
-    }
+        ));/
+     }
 }
+*/
