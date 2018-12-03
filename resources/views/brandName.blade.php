@@ -1,13 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+ <button type="button" class="btn btn-dark">Add Brand</button>
 @foreach ($brands as $brands)
-
-<h1 class="text-center text-white mt-3">Manage Car Brands</h1><br>
  <form method="POST" action="{{ route('post.braname') }}" enctype="multipart/form-data">
-  <button type="button" class="btn btn-dark">Add Brand</button>
-  <br>
 <table class="table table-dark">
   <thead>
     <tr>
@@ -35,9 +31,7 @@
     <tr>
   </tbody>
 </table>
-<br>
-<button type="button" class="btn btn-dark">Save Changes</button>
- 
 </form>
 @endforeach
+<button type="button" class="btn btn-dark">Save Changes</button>
 @endsection

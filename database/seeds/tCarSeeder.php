@@ -27,7 +27,7 @@ class tCarSeeder extends Seeder
                 'drivetrain' => "All Wheel Drive", 
                 'weight' => 1740, 
                 'velocity' => 313, 
-                'manufacturingYear' => "2017", 
+                'manufacturingYear' => "2017"
                 
             ),
               1 => array(
@@ -44,7 +44,7 @@ class tCarSeeder extends Seeder
                 'drivetrain' => "Rear Wheel Drive", 
                 'weight' => 1440, 
                 'velocity' => 331, 
-                'manufacturingYear' => "2018", 
+                'manufacturingYear' => "2018"
             ),
                2 => array(
                 'name' => "911 Gt2rs",
@@ -60,7 +60,7 @@ class tCarSeeder extends Seeder
                 'drivetrain' => "Rear Wheel Drive", 
                 'weight' => 1470.093, 
                 'velocity' => 356, 
-                'manufacturingYear' => "2018", 
+                'manufacturingYear' => "2018"
                 
             ),
         ));
