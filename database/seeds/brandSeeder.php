@@ -15,11 +15,13 @@ class brandSeeder extends Seeder
         \DB::table('brands')->insert(array(
             0 => array(
                 'name' => "Nissan",
-                'country' => "",
+                'country' => "Japan",
                 'foundingYear' => 99999
             ),
             1 => array(
                 'name' => "Porsche",
+                 'country' => "Germany",
+                'foundingYear' => 99999
             )
         ));
     }
