@@ -6,16 +6,35 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Setting;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
-class settingsController extends Controller
+class settingController extends Controller
 {
     public function update(Request $request){
+        $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
+        if ($setting != null) {
+            $setting->update([
+                'column' => $request->input('column'),
+                'row'=> $request->input('row'),
+                'scale'=> $request->input('scale'),
+            ]);
+        } else {
+            Setting::create([
+                'user_id'=> Auth::user()->id,
+                'column'=> $request->input('column'),
+                'row'=> $request->input('row'),
+                'scale'=> $request->input('scale'),
+            ]);
+        }
+        
 
-    DB::table('settings')->where('id', Auth::user()->id)->update(['column' => $request->input('column')]);
-    DB::table('settings')->where('id', Auth::user()->id)->update(['row' => $request->input('row')]);
-    DB::table('settings')->where('id', Auth::user()->id)->update(['scale' => $request->input('scale')]);
 
     return redirect()->back();
 
+    }
+    public function index()
+    {
+        $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
+        return view('settings', compact('setting'));
     }
 }

@@ -18,8 +18,9 @@
 
                 <!-- Heres the content after the "Brand CRUD" is inplemented -->
                 <div class="form-group LRInput">
-                    <label for="Brand">Brand</label>
-                    <input name="Brand" type="text" class="form-control" id="Brand" placeholder="e.g. Nissan" value="{{ old('Brand') }}">
+                    <select class="custom-select" name="Brand">
+                        <option value="{{ old('CarName') }}"></option>
+                    </select>
                 </div>
                 <!-- End of content after the "Brand CRUD" is implemented -->
 
@@ -40,7 +41,7 @@
                 </div>
                 <div class="form-group LRInput">
                     <label for="Price">Price (CHF)</label>
-                    <input name="Price" type="number" class="form-control" id="Price" placeholder="e.g. 120000" min="1"
+                    <input name="BasePrice" type="number" class="form-control" id="BasePrice" placeholder="e.g. 120000" min="1"
                         max="70000000" step="1" value="{{ old('Price') }}">
                 </div>
                 <div class="form-group LRInput">

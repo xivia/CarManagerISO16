@@ -16,7 +16,7 @@ class TCars extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('brand_id');
+            $table->integer('brand_id')->nullable($value = true);
             $table->integer('doors');
             $table->integer('seats');
             $table->double('acceleration', 4, 2);

@@ -22,29 +22,76 @@
 					<div class="form-group">
 						<label for="spalten">Rows</label>
 						<select name="row" class="form-control" id="row">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="3">4</option>
+							@if(1 == $setting->row)
+							<option selected>1</option>
+							@else
+							<option>1</option>
+							@endif
+							@if(2 == $setting->row)
+							<option selected>2</option>
+							@else
+							<option>2</option>
+							@endif
+							@if(3 == $setting->row)
+							<option selected>3</option>
+							@else
+							<option>3</option>
+							@endif
+							@if(4 == $setting->row)
+							<option selected>4</option>
+							@else
+							<option>4</option>
+							@endif
 						</select>
 					</div>
 					<div class="form-group">
 						<label for="column">Columns</label>
 						<select name="column" class="form-control" id="column">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="3">4</option>
-							<option value="3">5</option>
+							@if(1 == $setting->column)
+							<option selected>1</option>
+							@else
+							<option>1</option>
+							@endif
+							@if(2 == $setting->column)
+							<option selected>2</option>
+							@else
+							<option>2</option>
+							@endif
+							@if(3 == $setting->column)
+							<option selected>3</option>
+							@else
+							<option>3</option>
+							@endif
+							@if(4 == $setting->column)
+							<option selected>4</option>
+							@else
+							<option>4</option>
+							@endif
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="column">Scale</label>
+						<label for="scale">Scale</label>
 						<select name="scale" class="form-control" id="scale">
-							<option value="100">100</option>
-							<option value="75">75</option>
-							<option value="50">50</option>
-							<option value="25">25</option>
+							@if(100 == $setting->scale)
+							<option selected>100</option>
+							@else
+							<option>100</option>
+							@endif
+							@if(75 == $setting->scale)
+							<option selected>75</option>
+							@else
+							<option>75</option>
+							@endif
+							@if(50 ==$setting->scale)
+							<option selected>50</option>
+							@else
+							<option>50</option>
+							@endif
+							@if(25 == $setting->scale)
+							<option selected>25</option>
+							@else
+							<option>25</option>
+							@endif
 						</select>
 					</div>
 					<button type="submit" class="btn btn-primary LRPrimary">Update</button>

@@ -29,6 +29,10 @@ Route::get('/create', function () {
 	return view('createCar');
 });
 
+Route::get('/settings', ['uses' => 'settingController@index',]);
+
+Route::post('/settings_update', ['uses' => 'settingController@update',])->name('settings.update');
+
 Route::get('/brands','BrandNameController@index');
 
 

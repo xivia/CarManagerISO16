@@ -15,7 +15,7 @@ class Settings extends Migration
     {
         Schema::create('Settings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable($value = true);
             $table->string('column',50);
             $table->string('row',50);
             $table->string('scale',50);
