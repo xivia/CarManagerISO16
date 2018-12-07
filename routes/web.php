@@ -41,6 +41,12 @@ Route::get('/settings', ['uses' => 'settingController@index',]);
 
 Route::post('/settings_update', ['uses' => 'settingController@update',])->name('settings.update');
 
+Route::get('/showProfile', ['uses' => 'userController@show']);
+
+Route::get('/editProfile', ['uses' => 'userController@edit']);
+
+Route::post('/updateProfile', ['uses' => 'userController@update'])->name('user.update');
+
 Route::get('/brands','BrandNameController@index');
 
 
