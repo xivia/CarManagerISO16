@@ -51,5 +51,14 @@ class carController extends Controller{
     public function index(){
         $brands = DB::table('brands');
         return view('createCar', compact('brands'));
-    }   
+    }
+
+    public function carspec($car){
+        $cars = DB::table('cars')->where('id', $car)->first();
+        if ($cars != null) {
+            return view('carspec', compact('cars'));
+        } else {
+            return view('home');
+        }  
+    }
 }
