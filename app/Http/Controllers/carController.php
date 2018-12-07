@@ -61,4 +61,38 @@ class carController extends Controller{
             return view('home');
         }  
     }
+
+    public function edit($car){
+        $cars = DB::table('cars')->where('id', $car)->first();
+        if ($cars != null) {
+            return view('editCar', compact('cars'));
+        }else{
+            return view('home');
+        }
+        
+    }
+
+    public function update($car, Request $request){
+
+        $car = Car::where('id', $car)->first();
+
+        $car->name = $request->input('CarName');
+        $car->brand_id = $request->input('Brand');
+        $car->velocity = $request->input('Velocity');
+        $car->acceleration = $request->input('Acceleration');
+        $car->ps = $request->input('PS');
+        $car->basePrice = $request->input('Price');
+        $car->weight = $request->input('Weight');
+        $car->cylinders = $request->input('Weight');
+        $car->drivetrain = $request->input('Drivetrain');
+        $car->seats = $request->input('Seats');
+        $car->doors = $request->input('Doors');
+        $car->torque = $request->input('Torque');
+        $car->transmission = $request->input('Transmission');
+
+        $car->save();
+
+        return redirect()->back();
+
+    }
 }

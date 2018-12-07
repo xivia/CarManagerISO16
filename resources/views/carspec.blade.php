@@ -49,6 +49,10 @@
                         <p class="text-right mb-0">{{ $cars->weight }}(Kg)</p>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Seats:
+                        <p class="text-right mb-0">{{ $cars->seats }}</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
                         Cylinders:
                         <p class="text-right mb-0">{{ $cars->cylinders }}</p>
                     </li>

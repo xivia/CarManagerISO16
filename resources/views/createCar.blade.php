@@ -19,7 +19,7 @@
                 <!-- Heres the content after the "Brand CRUD" is inplemented -->
                 <div class="form-group LRInput">
                     <select class="custom-select" name="Brand">
-                        <option value="{{ old('CarName') }}"></option>
+                        <option value=""></option>
                     </select>
                 </div>
                 <!-- End of content after the "Brand CRUD" is implemented -->
@@ -55,7 +55,7 @@
                         step="1" value="{{ old('Seats') }}">
                 </div>
                 <div class="form-group LRInput">
-                    <label for="Weight">Manufacturing year</label>
+                    <label for="ManufacturingYear">Manufacturing year</label>
                     <input name="ManufacturingYear" type="number" class="form-control" id="ManufacturingYear"
                         placeholder="e.g. 1980" min="1800" max="2020" step="1" value="{{ old('ManufacturingYear') }}">
                 </div>
