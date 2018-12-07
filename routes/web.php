@@ -35,6 +35,8 @@ Route::get('/editcar/{car}', ['uses' => 'carController@edit',])->name('editCar')
 
 Route::post('/updateCar/{car}', ['uses' => 'carController@update',])->name('update.car');
 
+Route::get('/deleteCar/{car}', ['uses' => 'carController@deleteCar',])->name('delete.car');
+
 Route::get('/settings', ['uses' => 'settingController@index',]);
 
 Route::post('/settings_update', ['uses' => 'settingController@update',])->name('settings.update');

@@ -95,4 +95,17 @@ class carController extends Controller{
         return redirect()->back();
 
     }
+
+    public function deleteCar($car){
+
+        $cars = Car::where('id', $car)->first();
+
+        if ($cars != null) {
+            $cars->delete();        
+            return view('home');
+        }else{
+            return view('home');
+        }
+        
+    }
 }
