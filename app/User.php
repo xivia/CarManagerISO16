@@ -28,6 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function permission() {
+        return $this->hasOne('App\permission','id','permission_id');
+    }
+
     public function isAdmin() {
         if ($this->permission_id == '2') {
             return true;

@@ -19,11 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth','admin']);
+Route::get('/admin', 'PermissionController@index')->middleware(['auth']);
 
-Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car');
+Route::post('/createCar', 'carController@create')->name('post.car');
 
-Route::post('/brandss', 'BrandNameController@index')->middleware(['auth','admin'])->name('post.braname');
+Route::post('/brandss', 'BrandNameController@index')->middleware(['auth','admin'])->name('post.braname'); //????
 
 Route::get('/create', function () {
 	return view('createCar');

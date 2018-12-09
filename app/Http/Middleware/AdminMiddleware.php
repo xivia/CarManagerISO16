@@ -19,7 +19,6 @@ class AdminMiddleware
 
     
             if ($request->user()->isAdmin()) {
-                
                 return $next($request);
             }
     

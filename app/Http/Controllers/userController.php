@@ -42,4 +42,30 @@ class userController extends Controller
         return redirect()->back();
     }
 
+    
+        public function updatePerm() {
+    
+    
+            $this->validate(request(), [
+    
+                'user' => 'required',
+                'permission' => 'required',
+                
+    
+            ]);
+    
+    
+            $user = User::find(request('user'));
+    
+            $user->permission_id = request('permission');
+    
+            $user->save();
+    
+            Log::info('Admin: ' . Auth::user()->name.  ' updated '. $user->name . ' is now '. $user->permission->name);
+    
+    
+        return back();
+    
+        }
+
 }
