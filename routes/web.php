@@ -37,13 +37,13 @@ Route::post('/updateCar/{car}', ['uses' => 'carController@update',])->name('upda
 
 Route::get('/deleteCar/{car}', ['uses' => 'carController@deleteCar',])->name('delete.car');
 
-Route::get('/settings', ['uses' => 'settingController@index',]);
+Route::get('/settings', ['uses' => 'settingController@index',])->middleware('auth');
 
 Route::post('/settings_update', 'settingController@update')->middleware(['auth','admin'])->name('settings.update');
 
 Route::get('/showProfile', ['uses' => 'userController@show']);
 
-Route::get('/editProfile', ['uses' => 'userController@edit']);
+Route::get('/editProfile', ['uses' => 'userController@edit'])->middleware('auth');
 
 Route::post('/updateProfile', ['uses' => 'userController@update'])->name('user.update');
 
