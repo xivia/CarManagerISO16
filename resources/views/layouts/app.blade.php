@@ -46,20 +46,8 @@ http://www.tooplate.com/view/2081-solution
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <!-- isotope -->
-    <script src="js/isotope.js"></script>
-    <!-- images loaded -->
-    <script src="js/imagesloaded.min.js"></script>
-    <!-- wow -->
-    <script src="js/wow.min.js"></script>
-    <!-- smoothScroll -->
-    <script src="js/smoothscroll.js"></script>
-    <!-- jquery flexslider -->
-    <script src="js/jquery.flexslider.js"></script>
-    <!-- custom -->
-    <script src="js/custom.js"></script>
 
 </body>
 
