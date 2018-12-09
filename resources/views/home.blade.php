@@ -9,7 +9,7 @@
     <div class="card" style="width: 15.15rem;">
         <div class="card-body">
             <h5 class="card-title">{{ $cars->name }}</h5>
-            <a href="{{ route('showcarspecs', ['cars' => $cars->id]) }}" class="btn btn-primary">Show</a>
+            <a href="{{ route('showCarSpecs', ['cars' => $cars->id]) }}" class="btn btn-primary">Show</a>
         </div>
     </div>
     </div>

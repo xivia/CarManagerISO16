@@ -19,8 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/carspecs/{player}', ['uses' => 'carController@index',])->name('showcarspecs');
-
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware(['auth','admin']);
 
 Route::post('/createCar', ['uses' => 'carController@create',])->name('post.car');
