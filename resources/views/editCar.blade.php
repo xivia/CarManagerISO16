@@ -119,19 +119,26 @@
           <input name="Torque" type="number" class="form-control" id="Torque" placeholder="e.g. 1300" min="1" max="9000" step="1" value="{{ $cars->torque }}">
         </div>
         <div class="form-group LRInput">
-          <label for="Transmission">Transmission</label>
-          <select name="Transmission" class="form-control" id="Transmission">
+          <label for="Transmission">Transmission</label><br>
           @if('manuell' == $cars->transmission)
-          <option selected>Manuell</option>
+          <div class="form-check form-check-inline" id="Transmission">
+            <input class="form-check-input" type="radio" name="transmission" id="transmission" value="automatic">
+            <label class="form-check-label" for="inlineRadio1">Automatic</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transmission" id="transmission" value="manuell" checked>
+            <label class="form-check-label" for="inlineRadio2">Manuell</label>
+          </div>
           @else
-          <option>Manuell</option>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transmission" id="transmission" value="automatic" checked>
+            <label class="form-check-label" for="inlineRadio1">Automatic</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transmission" id="transmission" value="manuell">
+            <label class="form-check-label" for="inlineRadio2">Manuell</label>
+          </div>
           @endif
-          @if('automatic' == $cars->transmission)
-          <option selected>Automatic</option>
-          @else
-          <option>Automatic</option>
-          @endif
-          </select>
         </div>
         <button type="submit" class="btn btn-primary LRPrimary">Update</button>
         <a class="btn btn-secondary LRSecondary" href="/home">Cancel</a>

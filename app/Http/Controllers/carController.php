@@ -88,7 +88,7 @@ class carController extends Controller{
         $car->seats = $request->input('Seats');
         $car->doors = $request->input('Doors');
         $car->torque = $request->input('Torque');
-        $car->transmission = $request->input('Transmission');
+        $car->transmission = Input::get('transmission');;
 
         $car->save();
 
