@@ -18,21 +18,21 @@ class tUserSeeder extends Seeder
             'name' => "Name Admin",
             'email' => "admin@admin.edu",
             'password' => bcrypt('1'),
-            'permission_id' => 1,
+            'permission_id' => 2,
         ),
         1 => array(
             'id' => 2,
             'name' => "Name Mod",
             'email' => "moderator@moderator.edu",
             'password' => bcrypt('1'),
-            'permission_id' => 2,
+            'permission_id' => 3,
         ),
         2 => array(
             'id' => 3,
             'name' => "Name Guest",
             'email' => "guest@guest.edu",
             'password' => bcrypt('1'),
-            'permission_id' => 3,
+            'permission_id' => 1,
         )
     ));
     }

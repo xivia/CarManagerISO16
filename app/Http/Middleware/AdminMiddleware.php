@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class AdminMiddleware
@@ -17,15 +18,15 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {
 
-    
-            if ($request->user()->isAdmin()) {
-                return $next($request);
-            }
-    
-            Log::info('User: ' . $request->user()->name.  ' tried accessing admin area.');
-    
-            return back();
+        if ($request->user()->isAdmin()) {
             
+            return true;
+        }
+
+        Log::info('User: ' . $request->user()->name.  ' tried accessing admin area.');
+
+        return back();
+        
     }
 }
 
