@@ -19,9 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'PermissionController@index')->middleware(['auth','admin']);
 
-Route::post('/createCar', 'carController@create')->name('post.car');
+Route::post('/createCar', 'carController@create')->middleware(['auth','mod'])->name('post.car');
 
 Route::post('/brandss', 'BrandNameController@index')->name('post.braname'); //????
 
@@ -31,11 +30,11 @@ Route::get('/create', function () {
 
 Route::get('/view_specs/{car}', ['uses' => 'carController@carspec',])->name('showCarSpecs');
 
-Route::get('/editcar/{car}', ['uses' => 'carController@edit',])->name('editCar');
+Route::get('/editcar/{car}', ['uses' => 'carController@edit',])->middleware(['auth','mod'])->name('editCar');
 
-Route::post('/updateCar/{car}', ['uses' => 'carController@update',])->name('update.car');
+Route::post('/updateCar/{car}', ['uses' => 'carController@update',])->middleware(['auth','mod'])->name('update.car');
 
-Route::get('/deleteCar/{car}', ['uses' => 'carController@deleteCar',])->name('delete.car');
+Route::get('/deleteCar/{car}', ['uses' => 'carController@deleteCar',])->middleware(['auth','mod'])->name('delete.car');
 
 Route::get('/settings', ['uses' => 'settingController@index',])->middleware('auth');
 
@@ -49,4 +48,8 @@ Route::post('/updateProfile', ['uses' => 'userController@update'])->name('user.u
 
 Route::get('/brands','BrandNameController@index');
 
+Route::get('/admin', 'PermissionController@index')->middleware(['auth','admin']);
 
+Route::patch('/admin/update','UserController@updatePerm')->middleware(['auth','admin']);
+
+Route::delete('/admin/update', 'UserController@delete')->middleware(['auth','admin']);

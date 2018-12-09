@@ -51,9 +51,7 @@ class userController extends Controller
                 'user' => 'required',
                 'permission' => 'required',
                 
-    
-            ]);
-    
+            ]);    
     
             $user = User::find(request('user'));
     
@@ -63,6 +61,24 @@ class userController extends Controller
     
             Log::info('Admin: ' . Auth::user()->name.  ' updated '. $user->name . ' is now '. $user->permission->name);
     
+        return back();
+    
+        }
+
+        public function delete() {
+
+
+            $this->validate(request(), [
+    
+                'user' => 'required',
+                
+            ]);
+    
+            Log::info('Admin: ' . Auth::user()->name.  ' deleted '. $user->name);
+    
+            $user = User::find(request('user'));
+    
+            $user->delete();
     
         return back();
     

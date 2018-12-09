@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 class AdminMiddleware
@@ -20,7 +19,7 @@ class AdminMiddleware
 
         if ($request->user()->isAdmin()) {
             
-            return true;
+            return $next($request);
         }
 
         Log::info('User: ' . $request->user()->name.  ' tried accessing admin area.');
