@@ -35,6 +35,19 @@ class settingController extends Controller
     public function index()
     {
         $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
-        return view('settings', compact('setting'));
+        if ($setting != null) {
+            return view('settings', compact('setting'));
+        } else {
+            Setting::create([
+                'user_id'=> Auth::user()->id,
+                'column'=> 2,
+                'row'=> 2,
+                'scale'=> 50,
+            ]);
+            $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
+            return view('settings', compact('setting'));
+        }
+        
+        
     }
 }
