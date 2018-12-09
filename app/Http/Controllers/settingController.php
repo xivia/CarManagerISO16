@@ -15,15 +15,11 @@ class settingController extends Controller
         if ($setting != null) {
             $setting->update([
                 'column' => $request->input('column'),
-                'row'=> $request->input('row'),
-                'scale'=> $request->input('scale'),
             ]);
         } else {
             Setting::create([
                 'user_id'=> Auth::user()->id,
                 'column'=> $request->input('column'),
-                'row'=> $request->input('row'),
-                'scale'=> $request->input('scale'),
             ]);
         }
         
@@ -40,9 +36,7 @@ class settingController extends Controller
         } else {
             Setting::create([
                 'user_id'=> Auth::user()->id,
-                'column'=> 2,
-                'row'=> 2,
-                'scale'=> 50,
+                'column'=> 3,
             ]);
             $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
             return view('settings', compact('setting'));
