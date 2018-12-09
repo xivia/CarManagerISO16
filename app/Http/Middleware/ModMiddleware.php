@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Log;
 
 class ModMiddleware
 {
@@ -15,9 +16,10 @@ class ModMiddleware
      */
     public function handle($request, Closure $next)
     {
+        return $next($request);
         if ($request->user()->isAdmin() || $request->user()->isMod()) {
-                
-            return $next($request);
+            return $next($request);  
+            
         }
 
         Log::info('User: ' . $request->user()->name.  ' tried accessing moderator area.');

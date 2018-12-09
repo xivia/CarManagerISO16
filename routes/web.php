@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::post('/createCar', 'carController@create')->middleware(['auth','mod'])->name('post.car');
 
 Route::post('/brandss', 'BrandNameController@index')->name('post.braname'); //????
