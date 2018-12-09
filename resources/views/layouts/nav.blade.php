@@ -26,6 +26,7 @@
                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                 <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                 @else
+                <a class="nav-link" href="/admin">Permissions</a>
                 <a class="nav-link" href="/showProfile">Profile</a>
                 <a class="nav-link" href="/editProfile">Edit Profile</a>
                 <div class="dropdown-divider"></div>
