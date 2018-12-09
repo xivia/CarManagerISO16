@@ -34,8 +34,8 @@ $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
 		</div>
 	</div>
     </div>
+    <br>
 </div>
-
 @endforeach
 </div>
 </div>

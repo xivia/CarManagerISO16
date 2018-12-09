@@ -35,7 +35,7 @@ http://www.tooplate.com/view/2081-solution
 
 </head>
 
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse" id="Background">
 
     @include('layouts.nav')
 
