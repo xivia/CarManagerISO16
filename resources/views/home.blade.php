@@ -26,9 +26,10 @@ $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
 		<img id="dashcard" class="card-img-top" src="{{ asset('pictures/noimg.jpg') }}" alt="Card image cap">
 	@else
 	    <div class="card" style="width: 15.15rem;">
-		<img id="dashcard" class="card-img-top" src="{{ URL::asset('storage/' . $car->picture) }}" alt="Card image cap">
+        <img id="dashcard" class="card-img-top" src="{{ URL::asset('storage/' . $car->picture) }}" alt="Card image cap">
 	@endif
 		<div class="card-body">
+            <h5 class="card-title">{{ $car->name }}</h5>
 			<a href="{{ route('showCarSpecs', ['car' => $car->id]) }}" class="btn btn-primary">Show</a>
 			<a href="{{ route('editCar', ['car' => $car->id]) }}" class="btn btn-primary">Edit</a>
 		</div>
