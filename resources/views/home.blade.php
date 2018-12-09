@@ -32,6 +32,7 @@ $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
             <h5 class="card-title">{{ $car->name }}</h5>
 			<a href="{{ route('showCarSpecs', ['car' => $car->id]) }}" class="btn btn-primary">Show</a>
 			<a href="{{ route('editCar', ['car' => $car->id]) }}" class="btn btn-primary">Edit</a>
+			<a href="{{ route('delete.car', ['car' => $car->id]) }}" class="btn btn-primary">Delete</a>
 		</div>
 	</div>
     </div>
