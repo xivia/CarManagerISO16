@@ -37,7 +37,7 @@ Route::get('/deleteCar/{car}', ['uses' => 'carController@deleteCar',])->middlewa
 
 Route::get('/settings', ['uses' => 'settingController@index',])->middleware('auth');
 
-Route::post('/settings_update', 'settingController@update')->middleware(['auth','admin'])->name('settings.update');
+Route::post('/settings_update', 'settingController@update')->middleware('auth')->name('settings.update');
 
 Route::get('/showProfile', ['uses' => 'userController@show']);
 
