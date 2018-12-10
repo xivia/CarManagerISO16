@@ -74,9 +74,10 @@ class userController extends Controller
                 
             ]);
     
-            Log::info('Admin: ' . Auth::user()->name.  ' deleted '. $user->name);
+            
     
             $user = User::find(request('user'));
+            Log::info('Admin: ' . Auth::user()->name.  ' deleted '. $user->name);
     
             $user->delete();
     

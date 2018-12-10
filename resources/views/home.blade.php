@@ -6,7 +6,13 @@ $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
                 'user_id'=> Auth::user()->id,
                 'column'=> 3,
             ]);
-        }
+        }else{
+			Setting::create([
+                'user_id'=> Auth::user()->id,
+                'column'=> 3,
+            ]);
+            $setting = Setting::where('user_id', '=', Auth::user()->id)->first();
+		}
     $spaltenF = $setting->column;
 ?>
 @extends('layouts.app')
